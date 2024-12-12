@@ -1,0 +1,183 @@
+/* PROGRAMACION WEB EN PHP                  */
+/* Bartolome Sintes Marco                   */
+/* https://www.mclibre.org                  */
+/*                                          */
+/* CSS actualizado para index, login y logout */
+/*                                          */
+/* 12 de diciembre de 2024                  */
+
+/* Variables de colores */
+:root {
+    --main-color: 240; /* Azul profundo */
+    --accent-color: 300; /* Púrpura */
+    --background-light: #f9f9f9;
+    --text-dark: #333;
+    --text-light: #fff;
+    --button-hover: #0056b3; /* Color de fondo del hover de botones */
+    --primary-bg: #ffffff; /* Fondo blanco */
+    --shadow: rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0;
+    padding: 15px;
+    background-color: hwb(var(--main-color) 30% 5%);
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav {
+    background-color: hwb(var(--main-color) 40% 10%);
+    color: var(--text-light);
+    padding: 12px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: var(--text-light);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: hwb(var(--accent-color) 40% 10%);
+    color: var(--text-light);
+}
+
+/* Contenedor del formulario de login */
+main {
+    flex: 1; 
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--primary-bg);
+    box-shadow: 0 4px 12px var(--shadow);
+    border-radius: 8px;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: hwb(var(--main-color) 40% 20%);
+    outline: none;
+}
+
+.boton-invisible {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: hwb(var(--main-color) 30% 5%);
+}
+
+button, .boton {
+    background-color: hwb(var(--main-color) 30% 5%);
+    color: var(--text-light);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .boton:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+.aviso {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+a img {
+    border: none;
+}
+
+table.conborde,
+table.conborde td,
+table.conborde th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+thead tr,
+table.franjas tbody tr:nth-child(even) {
+    background-color: hwb(var(--main-color) 70% 5%);
+    color: black;
+}
+
+td,
+th {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos de Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: hwb(var(--main-color) 40% 10%);
+    color: var(--text-light);
+    text-align: center;
+    border-top: 1px solid #333;
+    flex-shrink: 0; /* Prevenir que el footer se encoja */
+}
+
+footer cite {
+    font-weight: bold;
+}
+
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
